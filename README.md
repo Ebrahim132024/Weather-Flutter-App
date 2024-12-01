@@ -1,16 +1,26 @@
-# weather_app
+# Flutter Weather App - Clean Architecture with Bloc
 
-A new Flutter project.
+A scalable weather application built with Flutter, following Clean Architecture principles and using Bloc for state management. Users can enter a city name to fetch real-time weather details like temperature, description, and an icon using the OpenWeatherMap API. The app emphasizes separation of concerns, robust error handling, and a clean, maintainable codebase.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+### User Input
+- Text field for entering the city name to search for weather data.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Weather API Integration
+- Uses **OpenWeatherMap API** to fetch real-time weather data.
+- API requests are handled using **Http** for network communication.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### State Management with Bloc
+- Implements **Bloc** (Business Logic Component) for managing state transitions.
+- Separates UI (Presentation Layer) from Business Logic for better maintainability.
+
+### Data Parsing and Display
+- Parses the API response to extract temperature, weather description, and weather icon.
+
+### Error Handling
+- Detects and displays errors for invalid city names (`City not found`).
+- Handles network errors (`Network error, please try again`).
+- Provides clear and actionable error messages for the user.
